@@ -1,0 +1,3 @@
+sudo docker build -t maestro .
+docker tag maestro us-central1-docker.pkg.dev/coffee-dao-org/maestro/maestro:latest
+docker push us-central1-docker.pkg.dev/coffee-dao-org/maestro/maestro

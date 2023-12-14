@@ -1,0 +1,53 @@
+name: cdao
+description: From Farm 2 Connoisseur
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # '>=2.19.5 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  email_validator: ^2.1.17
+  cupertino_icons: ^1.0.5 # ^1.0.2
+  firebase_core: ^2.12.0 # ^2.4.0
+  firebase_auth: ^4.7.2
+  firebase_storage: ^11.2.0 # ^11.0.5
+  firebase_database: ^10.2.0 # ^10.0.7
+  cloud_functions: ^4.3.1
+  cloud_firestore: ^4.7.0 # ^4.0.5
+  provider: ^6.0.5 # ^6.0.3
+  go_router: ^7.0.1 # ^6.5.5
+  url_strategy: ^0.2.0 # any
+  js: ^0.6.7 # ^0.6.4
+  carousel_slider: ^4.2.1
+  url_launcher: ^6.1.11
+  http: ^1.1.0
+  intl: ^0.18.1 # ^0.17.0
+  responsive_framework: ^1.1.1
+  csv: ^5.1.1
+  file_saver: ^0.2.9
+  logger: ^2.0.2+1
+  # address_search_field: ^5.0.3
+  # location: ^4.4.0
+  # google_maps_flutter: ^2.2.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1 # ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/images/
+  fonts:
+    - family: SaintMartyr
+      fonts:
+        - asset: lib/assets/fonts/saint-martyr-font/SaintMartyr-L39rg.otf
+        - asset: lib/assets/fonts/saint-martyr-font/SaintMartyr3D-ax10x.otf
+    - family: Alonira
+      fonts:
+        - asset: lib/assets/fonts/alonira/Alonira.ttf

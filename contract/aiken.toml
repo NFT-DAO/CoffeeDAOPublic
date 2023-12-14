@@ -1,0 +1,14 @@
+name = "nft-dao/dao_coffee"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'nft-dao/dao_coffee'"
+
+[repository]
+user = "nft-dao"
+project = "dao_coffee"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "main"
+source = "github"

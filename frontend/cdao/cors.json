@@ -1,0 +1,9 @@
+[
+    {
+        "origin": "*",
+        "method": "GET, POST",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "*"
+    }
+]
