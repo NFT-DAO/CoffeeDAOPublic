@@ -1,10 +1,11 @@
-import 'package:cdao/helpers/orderMaker.dart';
 import 'package:cdao/providers/firestoreProvider.dart';
+import 'package:cdao/helpers/orderMaker.dart';
 import 'package:cdao/widgets/common/contact/contactDialog.dart';
 import 'package:cdao/widgets/common/web_drawer.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 
 import '../models/mintResponseModel.dart';
@@ -27,11 +28,7 @@ import '../widgets/common/title.dart';
 class OrderFormScreen extends StatefulWidget {
   final String id;
   final String prem;
-  const OrderFormScreen({
-      required this.id,
-      required this.prem,
-      super.key
-    });
+  const OrderFormScreen({required this.id, required this.prem, super.key});
 
   @override
   State<OrderFormScreen> createState() => _OrderFormScreenState();
@@ -61,7 +58,7 @@ class _OrderFormScreenState extends State<OrderFormScreen> {
   String? local;
   late String arweaveId;
   late bool premium;
-
+  var logger = Logger();
   Future<void> getNft() async {
     _firestore = Provider.of<FirestoreService>(context, listen: false);
     _db = Provider.of<DB>(context, listen: false);
@@ -103,7 +100,7 @@ class _OrderFormScreenState extends State<OrderFormScreen> {
       _err = '';
       setState(() {});
       OrderMaker oh = OrderMaker(
-          premium,
+          premium.toString(),
           widget.id,
           arweaveId,
           wallet.text,
@@ -119,8 +116,7 @@ class _OrderFormScreenState extends State<OrderFormScreen> {
           _db);
       Map<String, String> resp = await oh.placeOrder();
       if (resp['error'] != null) {
-        debugPrint(
-            '9999999999999999 order screen order Error ${resp['error']}');
+        logger.e(' order screen order Error ${resp['error']}');
         _err = resp['error'];
       }
       _isSubmitting = false;
@@ -358,7 +354,7 @@ Continental USA Only''',
                       height: 12,
                     ),
                     const Text(
-                      '''Having Troubles or Questions? Contact us at contact@coffeedao.me or via the contact form.''',
+                      '''Having Troubles or Questions? Contact us at contact@productdao.me or via the contact form.''',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -381,7 +377,7 @@ Continental USA Only''',
                             context: context);
                       },
                     ),
-                    const Text('Copyright © NFTDAO 2023')
+                    const Text('Copyright © DAO 2023')
                   ],
                 ),
               ),

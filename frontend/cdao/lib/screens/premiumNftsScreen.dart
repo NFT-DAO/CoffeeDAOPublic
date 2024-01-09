@@ -11,8 +11,7 @@ import '../widgets/common/title.dart';
 
 class PremiumNftsScreen extends StatefulWidget {
   static const routeName = '/premium';
-  const PremiumNftsScreen({Key? key})
-      : super(key: key);
+  const PremiumNftsScreen({Key? key}) : super(key: key);
 
   @override
   State<PremiumNftsScreen> createState() => _PremiumNftsScreenState();
@@ -42,11 +41,6 @@ class _PremiumNftsScreenState extends State<PremiumNftsScreen> {
       }
     });
     getNfts();
-    setup();
-  }
-
-  Future<void> setup() async {
-    debugPrint('nft start ');
   }
 
   int minNftToShow = 50;
@@ -118,7 +112,7 @@ class _PremiumNftsScreenState extends State<PremiumNftsScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              '''Half Pound of Coffee and a Premium NFT ₳130''',
+              '''Half Pound of Product and a Premium NFT ₳130''',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 35),
             ),
@@ -247,7 +241,7 @@ Regular NFT's''',
                               }),
                         ),
                       ),
-            const Text('Copyright © NFTDAO 2023')
+            const Text('Copyright © DAO 2023')
           ],
         ));
   }

@@ -491,7 +491,7 @@ const DEFAULT_WORDLIST = [
     "coast",
     "coconut",
     "code",
-    "coffee",
+    "product",
     "coil",
     "coin",
     "collect",

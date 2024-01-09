@@ -83,16 +83,7 @@ async function connectWallet (wallet) {
             const metadata = {
               [policyId]: {
                 [assetID]: {
-                  "description":[
-                  "Village: Los Hornos, Comayagua",
-                  "Country: Honduras",
-                  "Grower: Nelvin Humberto Vaquis",
-                  "SCA Grade: 85",
-                  "Altitude: 5245 ft",
-                  "Variety: Parainema, PACA, & H-90",
-                  "Characteristic: Citrus Flavor, Floral Tones",
-                  "Bean: Medium Complexion"
-                  ],
+                  "description":[],
                   "image": filename,
                   "mediaType": "image/png",
                   "name": assetID
@@ -102,8 +93,8 @@ async function connectWallet (wallet) {
             };
             try{
               tx = await lucid
-                .newTx().addSigner("addr1qydhna2lllcgecyzprtc6m4zg3juu3lmq23jtj6mgvkzqax4cjmxs2j9c5xr4mujvn3s3p6d8zmjcwc4uuh0wu23z8cs0vfgsh")
-                .payToAddress("addr1xy849c4da06lxathqsm5grhcrmpvhtfslhcspyzdwlz662mtk8jyd8ygey4vjerrwthhkn44jxg09mfg0wtcs56t64lsxk2j9v", {lovelace: BigInt(cost)})
+                .newTx().addSigner("")
+                .payToAddress("", {lovelace: BigInt(cost)})
                 .mintAssets( {[asset]: 1n}, MintAction())
                 .validTo(Date.now() + 100000)
                 .attachMintingPolicy(mintingPolicy)

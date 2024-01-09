@@ -11,8 +11,7 @@ import '../widgets/common/title.dart';
 
 class LivePremiumNftsScreen extends StatefulWidget {
   static const routeName = '/live-premium';
-  const LivePremiumNftsScreen({Key? key})
-      : super(key: key);
+  const LivePremiumNftsScreen({Key? key}) : super(key: key);
 
   @override
   State<LivePremiumNftsScreen> createState() => _LivePremiumNftsScreenState();
@@ -102,7 +101,7 @@ class _LivePremiumNftsScreenState extends State<LivePremiumNftsScreen> {
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: const Padding(
             padding: EdgeInsets.all(8.0),
-            child:  TitleWidget(),
+            child: TitleWidget(),
           ),
           centerTitle: true,
         ),
@@ -117,7 +116,7 @@ class _LivePremiumNftsScreenState extends State<LivePremiumNftsScreen> {
                 '''
             These are the Premium NFT's with a watermark. Your NFT will not have the watermark.
             
-            One NFT and a half pound of single origin premium Honduran coffee for ₳130.''',
+            One NFT and a product for ₳130.''',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 25),
               ),
@@ -271,7 +270,7 @@ Regular NFT's''',
                               }),
                         ),
                       ),
-            const Text('Copyright © NFTDAO 2023')
+            const Text('Copyright © DAO 2023')
           ],
         ));
   }

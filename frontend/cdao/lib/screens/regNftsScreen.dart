@@ -141,7 +141,7 @@ class _RegNftsScreenState extends State<RegNftsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Text(
-                      '''Half Pound of Coffee and a Regular NFT ₳120''',
+                      '''Half Pound of Product and a Regular NFT ₳120''',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 35),
                     ),
@@ -249,7 +249,7 @@ Premium NFT's''',
                                   }),
                             ),
                           ),
-                    const Text('Copyright © NFTDAO 2023')
+                    const Text('Copyright © DAO 2023')
                   ],
                 ),
     );

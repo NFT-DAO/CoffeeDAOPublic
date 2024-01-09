@@ -15,7 +15,7 @@ class StorageService {
   }
 
   final _storage = FirebaseStorage.instance;
-  
+
   Future<Map<String, dynamic>> getNFTDownloadURLs(
       int amountToGet, String? pt, String? nftType) async {
     List<String> urlList = [];
@@ -33,7 +33,7 @@ class StorageService {
     }
     for (Reference item in listResult.items) {
       String u =
-          'https://firebasestorage.googleapis.com/v0/b/coffee-dao-org.appspot.com/o/app%2F$nftType%2F${item.fullPath.substring(9)}?alt=media';
+          'https://firebasestorage.googleapis.com/v0/b/product-dao-org.appspot.com/o/app%2F$nftType%2F${item.fullPath.substring(9)}?alt=media';
       urlList.add(u);
     }
     return {'pageToken': pageToken, 'urls': urlList};

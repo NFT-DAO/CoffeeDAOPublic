@@ -5,7 +5,7 @@ export async function getZip(
   city: string,
   state: string
 ): Promise<string> {
-  const url = `https://secure.shippingapis.com/shippingapi.dll?API=ZipCodeLookup&XML=<ZipCodeLookupRequest USERID="19RESE5049E77"><Address ID="0"><Address1></Address1><Address2>${street}</Address2><City>${city}</City><State>${state}</State><Zip5></Zip5><Zip4></Zip4></Address></ZipCodeLookupRequest>`;
+  const url = `https://secure.shippingapis.com/shippingapi.dll?API=ZipCodeLookup&XML=<ZipCodeLookupRequest USERID=${Deno.env.get('USERID')}"><Address ID="0"><Address1></Address1><Address2>${street}</Address2><City>${city}</City><State>${state}</State><Zip5></Zip5><Zip4></Zip4></Address></ZipCodeLookupRequest>`;
   const headers = {
     'Content-Type': 'text/xml',
   };

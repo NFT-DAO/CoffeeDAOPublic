@@ -18,7 +18,7 @@ type POSIXTime =
   Int
 
 validator {
-  fn mint_coffee(redeemer: Action, context: ScriptContext) -> Bool {
+  fn mint_product(redeemer: Action, context: ScriptContext) -> Bool {
     let ScriptContext { transaction, purpose } = context
 
     let Transaction { mint, outputs, validity_range, extra_signatories, .. } =
@@ -68,7 +68,7 @@ fn check_minting_conditions(
              when output.address.payment_credential is {
                VerificationKeyCredential(_) -> False
                ScriptCredential(hash) ->
-                 hash == #"0f52e2adebf5f375770437440ef81ec2cbad30fdf100904d77c5ad2b"
+                 hash == #""
              }
            },
          )
@@ -76,7 +76,7 @@ fn check_minting_conditions(
   let must_be_signed =
     list.has(
       signatories,
-      #"1b79f55ffff08ce08208d78d6ea24465ce47fb02a325cb5b432c2074",
+      #"",
     )
   // 1706572800000 is January 30th 2024 midnight GMT
   let before_deadline = must_mint_before_deadline(range, 1706572800000)

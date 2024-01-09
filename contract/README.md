@@ -1,0 +1,2 @@
+The contract is made with Aiken. You will need to adjust the validators DAO Signatory PKH, ScriptCredential(hash), before_deadline and the check_minting_conditions amount of ADA.
+The generated json file needs to be copied to the backend/cloudRun/cloudRunMaestro folder and the frontend/cdao/web folder.

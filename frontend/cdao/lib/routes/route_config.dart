@@ -1,3 +1,4 @@
+import 'package:cdao/providers/firebaseRTDBProvider.dart';
 import 'package:cdao/routes/route_const.dart';
 import 'package:cdao/screens/shippingPortal/signin.dart';
 import 'package:cdao/screens/shippingPortal/shippingPortal.dart';
@@ -20,20 +21,13 @@ import 'navigatorObserver.dart';
 
 class CDAORouter {
   final FirebaseAuth _firebaseAuth;
+  final DB db;
   User? user;
-  CDAORouter(this._firebaseAuth) {
-    if (_firebaseAuth.currentUser == null) {
-      _firebaseAuth.signInAnonymously().then((value) async {
-        user = _firebaseAuth.currentUser;
-      });
-    } else {
-      user = _firebaseAuth.currentUser;
-    }
-  }
+  CDAORouter(this.db, this._firebaseAuth);
   GoRouter returnRouter() {
     GoRouter router = GoRouter(
       observers: [
-        NavObserver(_firebaseAuth),
+        NavObserver(db),
       ],
       routes: <RouteBase>[
         GoRoute(

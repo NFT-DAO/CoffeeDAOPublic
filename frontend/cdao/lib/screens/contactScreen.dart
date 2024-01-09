@@ -31,7 +31,7 @@ class ContactScreen extends StatelessWidget {
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: const Padding(
             padding: EdgeInsets.all(8.0),
-            child:  TitleWidget(),
+            child: TitleWidget(),
           ),
           centerTitle: true,
         ),
@@ -50,7 +50,7 @@ class ContactScreen extends StatelessWidget {
               ),
             ),
             ContactForm(),
-            Text('Copyright © NFTDAO 2023')
+            Text('Copyright © DAO 2023')
           ]),
         )));
   }

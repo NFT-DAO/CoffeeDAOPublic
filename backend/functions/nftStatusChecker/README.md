@@ -1,0 +1,3 @@
+This cloud function is used to check for orders that are not verified and older then six hours long. Indicating a failed transaction. If there are failed transactions the NFT is made available again.
+When setting up this cloud function set a trigger for Pub/Sub topic nftStatusChecker which has a subscriber from a Cloud Scheduler that is set to trigger every hour.
+This script requires a environmental variable "databaseURL" for the projects Firebase Realtime Database and a variable "project" for the project id.

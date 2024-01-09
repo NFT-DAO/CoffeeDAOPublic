@@ -3,15 +3,14 @@ import {
           Lucid,
         } from "./deps.ts";
 
-const m = Deno.env.get('MAESTRO');
-// console.log('MAESTRO:', m);
+const m = Deno.env.get('MAESTRO_PRE');
 const lucid = await Lucid.new(
   new Maestro({
-    network: "Mainnet",
+    network: "Preprod",
     apiKey: m as string,
     turboSubmit: true
   }),
-  "Mainnet",// TODO
+  "Preprod",// TODO
 );
 
 export async function mintNFT(
@@ -22,17 +21,14 @@ export async function mintNFT(
   let signedTx;
   let txObj;
   try {
-    console.log('55555555555555555 mintNFT ',tx);
     const mnemonic = Deno.env.get('WALLET')
     lucid.selectWalletFromSeed(mnemonic);
     txObj = lucid.fromTx(tx);
     daoWitness = await txObj.partialSign();
     signedTx = await txObj.assemble([daoWitness, witness]).complete();
     const txHash = await lucid.provider.submitTx(signedTx.toString());
-    console.log('55555555555555555 txHash ',txHash);
     return {"txhash": JSON.stringify(txHash)};
   } catch (error) {
-    console.error('999999999999999 Error mintNFT error:', typeof(error), error);
     return {"error": JSON.stringify(error)};
   }
 }

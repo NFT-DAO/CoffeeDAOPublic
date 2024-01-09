@@ -1,21 +1,12 @@
 import 'dart:convert';
-
 import 'package:cdao/providers/firebaseRTDBProvider.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import '../models/nftDbModel.dart';
 
 // This class helps reset the NFT RTDB entry when the back button is used when a order is not completed.
 class NavObserver extends NavigatorObserver {
-  final FirebaseAuth _firebaseAuth;
-  late DB db;
-  NavObserver(this._firebaseAuth) {
-    if (_firebaseAuth.currentUser == null) {
-      _firebaseAuth.signInAnonymously();
-    }
-    db = DB(_firebaseAuth);
-  }
+  final DB db;
+  NavObserver(this.db);
   Future<void> parse(String routeS) async {
     List splitMain = routeS.split(', ');
 

@@ -44,7 +44,7 @@ class _AddressControllerState extends State<AddressController> {
     });
     // Calls the cloud run server backend/cloudRun/addressAutoComplete
     final resp =
-        await http.post(Uri.parse('https://ac-52otiiaapq-uc.a.run.app/zip'),
+        await http.post(Uri.parse('${const String.fromEnvironment('ADDR_AUTO_COMPLETE_URL_BASE')}/zip'),
             headers: <String, String>{
               'Content-Type': 'application/json; charset=UTF-8',
             },
@@ -58,7 +58,7 @@ class _AddressControllerState extends State<AddressController> {
   // Calls the cloud run server backend/cloudRun/addressAutoComplete
   Future<void> placesAutoComplete(String query) async {
     final resp =
-        await http.post(Uri.parse('https://ac-52otiiaapq-uc.a.run.app/ac'),
+        await http.post(Uri.parse('${const String.fromEnvironment('ADDR_AUTO_COMPLETE_URL_BASE')}/ac'),
             headers: <String, String>{
               'Content-Type': 'application/json; charset=UTF-8',
             },

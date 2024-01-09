@@ -137,7 +137,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                         height: 10,
                       ),
                       const Text(
-                        '''Your coffee will be shipped by with in a week from ordering. Be on the look out for update emails about your order from contact@coffeedao.org. Feel free to reach out to us at the same email if you have any questions concerning your order.''',
+                        '''Your product will be shipped by with in a week from ordering. Be on the look out for update emails about your order from contact@productdao.org. Feel free to reach out to us at the same email if you have any questions concerning your order.''',
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(
@@ -145,10 +145,10 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                       ),
                       ElevatedButton(
                           onPressed: () {
-                            context.goNamed(CDAOConstants.livePremiumNftRoute); // TODO
+                            context.goNamed(CDAOConstants.livePremiumNftRoute);
                           },
                           child: const Text(
-                            '''More Coffee & NFT's?''',
+                            '''More Product & NFT's?''',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 20),
                           )),
@@ -160,7 +160,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                       ),
                       const Text(
                         '''Having Troubles or Questions
-Contact Us at contact@coffeedao.me or via the contact form.''',
+Contact Us at contact@productdao.me or via the contact form.''',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20,
@@ -182,7 +182,7 @@ Contact Us at contact@coffeedao.me or via the contact form.''',
                               context: context);
                         },
                       ),
-                      const Text('Copyright © NFTDAO 2023')
+                      const Text('Copyright © DAO 2023')
                     ],
                   ),
           ),

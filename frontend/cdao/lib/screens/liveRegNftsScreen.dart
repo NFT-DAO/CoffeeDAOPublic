@@ -11,8 +11,7 @@ import '../widgets/common/title.dart';
 
 class LiveRegNftsScreen extends StatefulWidget {
   static const routeName = '/live-nfts';
-  const LiveRegNftsScreen({Key? key})
-      : super(key: key);
+  const LiveRegNftsScreen({Key? key}) : super(key: key);
 
   @override
   State<LiveRegNftsScreen> createState() => _LiveRegNftsScreenState();
@@ -112,7 +111,7 @@ class _LiveRegNftsScreenState extends State<LiveRegNftsScreen> {
               child: Text(
                 '''These are the Regular NFT's with a watermark. Your NFT will not have the watermark.
                 
-                One NFT and a half pound of single origin premium Honduran coffee for ₳120.''',
+                One NFT and a product for ₳120.''',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 25),
               ),
@@ -221,7 +220,8 @@ Premium NFT's''',
                                                                       .elementAt(
                                                                           index)!
                                                                       .id as String,
-                                                                  "premium": 'false'
+                                                                  "premium":
+                                                                      'false'
                                                                 }),
                                                           )
                                                         : const SizedBox(
@@ -265,7 +265,7 @@ Premium NFT's''',
                               }),
                         ),
                       ),
-            const Text('Copyright © NFTDAO 2023')
+            const Text('Copyright © DAO 2023')
           ],
         ));
   }

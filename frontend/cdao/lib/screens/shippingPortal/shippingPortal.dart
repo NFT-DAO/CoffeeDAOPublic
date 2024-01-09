@@ -60,23 +60,6 @@ class _PortalScreenState extends State<PortalScreen> {
     ord.sort((OrderModel order1, OrderModel order2) => isAscending
         ? order1.status.compareTo(order2.status)
         : order2.status.compareTo(order1.status));
-    // if (sortColumnIndex == 0) {
-    //   ord.sort((OrderModel order1, OrderModel order2) => isAscending
-    //       ? order1.selected.toString().compareTo(order2.selected.toString())
-    //       : order2.selected.toString().compareTo(order1.selected.toString()));
-    // } else if (sortColumnIndex == 1) {
-    //   ord.sort((OrderModel order1, OrderModel order2) => isAscending
-    //       ? order1.status.compareTo(order2.status)
-    //       : order2.status.compareTo(order1.status));
-    // } else if (sortColumnIndex == 2) {
-    //   ord.sort((OrderModel order1, OrderModel order2) => isAscending
-    //       ? order1.id.compareTo(order2.id)
-    //       : order2.id.compareTo(order1.id));
-    // } else if (sortColumnIndex == 3) {
-    //   ord.sort((OrderModel order1, OrderModel order2) => isAscending
-    //       ? order1.name.compareTo(order2.name)
-    //       : order2.name.compareTo(order1.name));
-    // }
   }
 
   @override

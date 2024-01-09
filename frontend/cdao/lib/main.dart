@@ -24,9 +24,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
   // Dev
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   _getKey = allowInterop(_gk);
   runApp(CDAO());
 }
@@ -43,7 +41,7 @@ class _CDAOState extends State<CDAO> {
   void initState() {
     super.initState();
     _firebaseAuth = FirebaseAuth.instance;
-    if(_firebaseAuth.currentUser == null){
+    if (_firebaseAuth.currentUser == null) {
       _firebaseAuth.signInAnonymously();
     }
   }
@@ -87,8 +85,10 @@ class _CDAOState extends State<CDAO> {
         ],
         child: MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          routerConfig: CDAORouter(_firebaseAuth).returnRouter(),
-          title: 'Coffee DAO',
+          routerConfig:
+              CDAORouter(Provider.of<DB>(context, listen: false), _firebaseAuth)
+                  .returnRouter(),
+          title: 'DAO',
           theme: themeData,
         ));
   }

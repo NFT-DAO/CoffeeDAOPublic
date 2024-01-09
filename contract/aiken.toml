@@ -1,11 +1,11 @@
-name = "nft-dao/dao_coffee"
+name = "nft-dao/dao_product"
 version = "0.0.0"
 license = "Apache-2.0"
-description = "Aiken contracts for project 'nft-dao/dao_coffee'"
+description = "Aiken contracts for project 'nft-dao/dao_product'"
 
 [repository]
 user = "nft-dao"
-project = "dao_coffee"
+project = "dao_product"
 platform = "github"
 
 [[dependencies]]

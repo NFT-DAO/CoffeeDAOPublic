@@ -11,7 +11,7 @@ import firebase_admin
 @functions_framework.cloud_event
 def hello_firestore(cloud_event: CloudEvent) -> None:
     firebase_admin.initialize_app()
-    fsdb = fs.Client(project="coffee-dao-org")
+    fsdb = fs.Client(project=os.environ.get('project'))
     orderRef = fsdb.collection('orders')
 
     firestore_payload = firestore.DocumentEventData()
@@ -26,18 +26,18 @@ def hello_firestore(cloud_event: CloudEvent) -> None:
     id = newOrder.fields['id'].string_value
 
     if status == 'shipped' and shippingEmailSent == False:
-            message = 'Hi ' + name + ', your order is about to ship. You can track it via USPS using this tracking reference: ' + trackingNum + '. Feel free to contact us with any questions at contact@coffeedao.me'
+            message = 'Hi ' + name + ', your order is about to ship. You can track it via USPS using this tracking reference: ' + trackingNum + '. Feel free to contact us with any questions at contact@productdao.me'
             SMTP_SERVER = 'mail.gandi.net'
             SMTP_PORT = 587
-            SMTP_USERNAME = 'contact@coffeedao.me'
+            SMTP_USERNAME = 'contact@productdao.me'
             SMTP_PASSWORD = os.environ.get('mail')
-            SENDER_EMAIL = 'contact@coffeedao.me'
+            SENDER_EMAIL = 'contact@productdao.me'
 
             # Message constructor
             msg = MIMEMultipart()
             msg['From'] = SENDER_EMAIL
             msg['To'] =  userEmail
-            msg['Subject'] = 'Update On Your Coffee DAO Order'
+            msg['Subject'] = 'Update On Your DAO Order'
             msg.attach(MIMEText(message, 'plain'))
 
             # Send the email

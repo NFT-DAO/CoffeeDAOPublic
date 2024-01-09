@@ -18,9 +18,9 @@ def hello_firestore(event, context):
     # Email server configuration
     SMTP_SERVER = 'mail.gandi.net'
     SMTP_PORT = 587
-    SMTP_USERNAME = 'contact@coffeedao.me'
+    SMTP_USERNAME = 'contact@productdao.me'
     SMTP_PASSWORD = os.environ.get('mail')
-    SENDER_EMAIL = 'contact@coffeedao.me'
+    SENDER_EMAIL = 'contact@productdao.me'
 
     # Message constructor
     msg = MIMEMultipart()

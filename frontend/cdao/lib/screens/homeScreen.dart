@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'lib/assets/images/crew.png',
       fit: BoxFit.fill,
     );
-    var bagImage = Image.asset('lib/assets/images/bagNcup.png');
+    var bagImage = Image.asset('lib/assets/images/bag.png');
     var p1Image = Image.asset('lib/assets/images/p1.png');
     var p2Image = Image.asset('lib/assets/images/p2.png');
 
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           title: const Padding(
             padding: EdgeInsets.all(8.0),
-            child:  TitleWidget(),
+            child: TitleWidget(),
           ),
           centerTitle: true,
         ),
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'CoffeeDAO ',
+                    text: 'DAO ',
                     style: TextStyle(
                         fontSize: largeTextSize,
                         fontWeight: FontWeight.bold,
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: <TextSpan>[
                       TextSpan(
                           text:
-                              '''is an initiative to attach an NFT with each coffee bag sold on our platform. This provides consumers with the origin of the coffee, its characteristics, and the growers' artistic process used in the production.''',
+                              '''This is an initiative to attach an NFT with each product sold on our platform.''',
                           style: TextStyle(
                               fontSize: smallTextSize,
                               fontWeight: FontWeight.normal,
@@ -154,34 +154,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   // bagImage
                   Positioned(
-                      top:  width > 1130 && width <= 1200
-                      ? width / 4 * 3 
-                      : width > 1200 
-                      ? width / 3*2 
-                      : width /5*4,
+                      top: width > 1130 && width <= 1200
+                          ? width / 4 * 3
+                          : width > 1200
+                              ? width / 3 * 2
+                              : width / 5 * 4,
                       left: 5,
                       child: SizedBox(width: width, child: bagImage)),
                   Positioned(left: 20, top: width / 3, child: p1Image),
                   Positioned(left: width / 5 * 3, top: width, child: p2Image),
-                  // // Notify Me button
-                //   Positioned(
-                //       //TODO
-                //       left: width / 18 * 6,
-                //       top:  width > 1130 && width <= 1200
-                //       ? (width / 4 * 3) + 100
-                //       : width > 1200 
-                //       ? width / 3*2 + 100
-                //       : width /5*4 + 100,
-                //       child: ElevatedButton(
-                //         child: Padding(
-                //           padding: const EdgeInsets.all(8.0),
-                //           child: Text(
-                //             'Buy Now!', //TODO
-                //             style: TextStyle(fontSize: largeTextSize),
-                //           ),
-                //         ),
-                // onPressed: () => context.goNamed(CDAOConstants.premiumNftRoute),
-                //       )),
                 ], //<Widget>[]
               ),
               SizedBox(width: width, child: crewImage),
@@ -197,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
-                            text: 'CoffeeDAO ',
+                            text: 'DAO ',
                             style: TextStyle(
                               fontSize: largeTextSize,
                               fontWeight: FontWeight.bold,
@@ -206,13 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: <TextSpan>[
                               TextSpan(
                                   text:
-                                      '''is an initiative to attach an NFT with each coffee bag sold on our platform. This provides customers with the origin of the coffee, characteristics of the coffee, and the artistic process used in the production by the grower. For producers it creates a record of the consistent quality of their product and a direct link with the coffee drinkers that buy their coffee.
-
-This is a single origin coffee, cultivated 5,249 feet above sea level in the mountains of Concepcion de Los Hornos, Comayagua, Honduras by the artisan Mr. Melvin Humberto Baquis at the Finca "La Casona" and "El Ocotialto". With special care in preparing the land and preserving the environment, using compost from anaerobic bio digesters and formula for fertilization. The cultivated coffee tree species are from the Timor and Villa Sarchi families, specifically Parainema as well as PACA and H-90 species. In the same way, the flowers of the surrounding plants such as citrus and cherry fruits, are used to flavor the coffee's unique aroma during the bee pollination process.
-
-After individually harvesting the coffee cherries, a manual screening is carried out eliminating natural defects. The pulp is removed and washed in an ordinary case and then dried at outdoor temperature until reaching an optimal humidity of 11% per batch. Subsequently, the parchment, a natural membrane that covers the bean, is removed and ready for a medium roast. It's important to carefully control the roasting mechanisms maintaining the balance of time by volume of each batch and air to be in ratio, ending with a rapid cooling process to preserve the aromas.
-
-This coffee's profile aroma is at 85%, a creamy texture with dark sweet chocolate fragrances and mandarin and orange citrus tones. The ways to enjoy your coffee beans varies and it's recommended to keep your samples at a cold temperature and grind it in a suitable mill just before making the infusion.''',
+                                      '''''',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: smallTextSize,
@@ -227,42 +202,27 @@ This coffee's profile aroma is at 85%, a creamy texture with dark sweet chocolat
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text('''Buy Now!''',
-                            style: TextStyle(
-                                fontSize: largeTextSize,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white)),
-                  // RichText(
-                  //   textAlign: TextAlign.center,
-                  //   text: TextSpan(
-                  //     text: 'NFT',
-                  //     style: TextStyle(
-                  //         fontSize: smallTextSize,
-                  //         fontWeight: FontWeight.bold,
-                  //         color: const Color.fromRGBO(235, 165, 65, 1.0)),
-                  //     children: <TextSpan>[
-                  //       TextSpan(
-                  //           text: '''Buy Now!''',
-                  //           style: TextStyle(
-                  //               fontSize: smallTextSize,
-                  //               fontWeight: FontWeight.normal,
-                  //               color: Colors.white)),
-                  //     ],
-                  //   ),
-                  // ),
+                      style: TextStyle(
+                          fontSize: largeTextSize,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white)),
                 ),
-                onPressed: () => context.goNamed(CDAOConstants.premiumNftRoute),////livePremiumNftRoute
+                onPressed: () => context.goNamed(
+                    CDAOConstants.premiumNftRoute), ////livePremiumNftRoute
               ),
               const SizedBox(
                 height: 25,
               ),
               InkWell(
-                  onTap: () => context.goNamed(CDAOConstants.premiumNftRoute),///livePremiumNftRoute
+                  onTap: () => context.goNamed(CDAOConstants.premiumNftRoute),
+
+                  ///livePremiumNftRoute
                   child: loaded
-        ? CarouselSlider(
-            items: imageSliders,
-            options: CarouselOptions(autoPlay: true),
-          )
-        : const CircularProgressIndicator()),
+                      ? CarouselSlider(
+                          items: imageSliders,
+                          options: CarouselOptions(autoPlay: true),
+                        )
+                      : const CircularProgressIndicator()),
               const SizedBox(
                 height: 25,
               ),
@@ -278,7 +238,7 @@ This coffee's profile aroma is at 85%, a creamy texture with dark sweet chocolat
                       Padding(
                         padding: const EdgeInsets.all(50.0),
                         child: Text(
-                            '''BUY ONE HALF POUND OF PREMIUM HONDURAN COFFEE & GET A CARDANO ORIGIN CERTIFICATE NFT''',
+                            '''BUY ONE & GET A CARDANO ORIGIN CERTIFICATE NFT''',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: largeTextSize)),
                       ),
@@ -296,27 +256,6 @@ This coffee's profile aroma is at 85%, a creamy texture with dark sweet chocolat
                 ),
               ),
               const ContactForm(),
-//               Padding(
-//                 padding: const EdgeInsets.all(18.0),
-//                 child: RichText(
-//                   textAlign: TextAlign.center,
-//                   text: TextSpan(
-//                     text: 'LEGAL Disclaimer: ',
-//                     style: const TextStyle(
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.white,
-//                         fontSize: 10),
-//                     children: <TextSpan>[
-//                       TextSpan(
-//                           text:
-//                               '''If you choose to provide us with your email address, we will use it only to send updates on the CoffeeDAO NFT project. To unsubscribe write to contact@coffeedao.me
-// Copyright© NFTDAO 2023''',
-//                           style: TextStyle(
-//                               color: Colors.grey.shade400, fontSize: 10)),
-//                     ],
-//                   ),
-//                 ),
-//               ),
             ],
           ),
         )));

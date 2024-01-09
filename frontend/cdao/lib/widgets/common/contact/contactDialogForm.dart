@@ -32,17 +32,17 @@ class _ContactFormState extends State<ContactForm> {
     Future<void> submitContactForm() async {
       await firestore
           .sendContactForm(
-              userEmail: 'contact@coffeedao.me',
+              userEmail: 'contact@productdao.me',
               subject: 'Contact From',
               emailBody: "$_name email: $_email $_message",
-              name: 'CoffeeDAO')
+              name: 'DAO')
           .then((value) {
         if (value == 'Contact Sent') {
           firestore.sendContactForm(
               userEmail: _email,
-              subject: 'Thanks for reaching out to Coffee DAO.',
+              subject: 'Thanks for reaching out to DAO.',
               emailBody:
-                  "Hi $_name, Please give us a few days to review your message and respond. Thanks the Coffee Dao Team",
+                  "Hi $_name, Please give us a few days to review your message and respond. Thanks the Product Dao Team",
               name: _name);
           _result = 'Your comment has been sent.';
           _isSubmitting = false;
